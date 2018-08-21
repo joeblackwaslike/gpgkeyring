@@ -1,0 +1,7 @@
+GNUPGHOME = "/tmp/keyring"
+PASSPHRASE = "testing"
+TIMESTAMP = 1528106719
+
+GPGBINARY = "gpg2"
+USE_AGENT = True
+GPG_ENCODING = "utf-8"

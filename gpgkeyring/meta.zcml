@@ -1,0 +1,17 @@
+<configure
+    xmlns:meta="http://namespaces.zope.org/meta">
+
+    <include package="zope.component" file="meta.zcml" />
+
+    <meta:directives namespace="http://namespaces.zope.org/gpgkeyring">
+
+        <meta:directive
+            name="gpgKeyring"
+            schema=".metadirectives.IGPGKeyringDirective"
+            handler=".metaconfigure.gpgKeyringHandler" />
+
+    </meta:directives>
+
+    <meta:provides feature="gpgKeyring" />
+
+</configure>

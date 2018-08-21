@@ -1,0 +1,8 @@
+[run]
+omit =
+  *metaconfigure.py,
+  *metadirectives.py,
+  *patches.py,
+  *tests/*,
+  setup.py,
+  tasks.py

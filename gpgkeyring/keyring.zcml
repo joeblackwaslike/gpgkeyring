@@ -1,0 +1,12 @@
+<configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns="http://namespaces.zope.org/gpgkeyring">
+
+    <zope:include file="meta.zcml" />
+
+    <gpgKeyring
+        factory=".GPG"
+        gnupghome="~/.gnupg"
+        name="" />
+
+</configure>

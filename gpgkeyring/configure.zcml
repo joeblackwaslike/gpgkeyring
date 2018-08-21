@@ -1,0 +1,23 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+    <include file="meta.zcml" />
+
+    <adapter factory=".keys.Keyring" />
+    <adapter factory=".keys._Keylist" />
+
+    <utility
+        provides="zope.component.interfaces.IFactory"
+        component=".keys._key_factory"
+        name="gpgkeyring.Key" />
+
+    <utility
+        provides="zope.component.interfaces.IFactory"
+        component=".keys._subkey_factory"
+        name="gpgkeyring.SubKey" />
+
+    <utility
+        provides="zope.component.interfaces.IFactory"
+        component=".gpg._gpg_factory"
+        name="gpgkeyring.GPG" />
+
+</configure>

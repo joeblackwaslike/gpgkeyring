@@ -1,0 +1,26 @@
+[all]
+json = True
+autoapply = false
+use_spaces = True
+files = **/*
+ignore = **.orig, *.min.js, *.pyc, *.pyo
+editor=subl
+
+[python]
+# Patches may conflict with autopep8 so putting them in own section so they
+# will be executed sequentially; also we need the LineLengthBear to double
+# check the line length because PEP8Bear sometimes isn't able to correct the
+# linelength.
+# bears = SpaceConsistencyBear, QuotesBear
+use_spaces = True
+max_line_length
+files = **/*.py
+bears = SpaceConsistencyBear, LineLengthBear, PEP8Bear
+language = python
+default_actions = *: ApplyPatchAction
+preferred_quotation = "
+autoapply = false
+default_actions="*: ApplyPatchAction"
+
+[python.autopep8]
+#bears = PEP8Bear, PycodestyleBear
